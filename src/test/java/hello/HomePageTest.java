@@ -49,8 +49,10 @@ public class HomePageTest {
     @Test
     public void getHomePage_hasCorrectTitle() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
-                .andExpect(status().isOk())
-                .andExpect(xpath("//title").exists())
-                .andExpect(xpath("//title").string("CS56 Spring Boot Practice App"));
+	        .andExpect(status().isOk())
+	    // .andExpect(xpath("//title").exists())
+            // .andExpect(xpath("//title").string("CS56 Spring Boot Practice App"));
+	        .andExpect(xpath("/html/body/div/nav/a").exists())
+                .andExpect(xpath("/html/body/div/nav/a").string("lab07"));
     }
 }
