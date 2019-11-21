@@ -1,5 +1,7 @@
-# link to github page 
-https://ucsb-cs56-f19.github.io/lab07-YanwuTong/
+# link 
+* github page: https://ucsb-cs56-f19.github.io/lab07-YanwuTong/
+* on heroku: https://cs56-f19-lab07-yanwutong.herokuapp.com/
+* repo: https://github.com/ucsb-cs56-f19/lab07-YanwuTong/
 
 
 
