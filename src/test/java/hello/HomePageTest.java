@@ -73,6 +73,6 @@ public class HomePageTest {
 	    // .andExpect(xpath("//title").exists())
             // .andExpect(xpath("//title").string("CS56 Spring Boot Practice App"));
 	        .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").exists())
-                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").string("Earthquakes"));
+                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").string("Earthquake Search"));
     }
 }
