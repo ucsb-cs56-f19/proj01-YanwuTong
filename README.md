@@ -1,3 +1,7 @@
+# Travis-ci
+https://travis-ci.org/ucsb-cs56-f19/lab07-YanwuTong.svg?branch=master
+
+
 # link 
 * github page: https://ucsb-cs56-f19.github.io/lab07-YanwuTong/
 * on heroku: https://cs56-f19-lab07-yanwutong.herokuapp.com/
