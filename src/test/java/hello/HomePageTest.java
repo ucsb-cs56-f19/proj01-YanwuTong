@@ -75,4 +75,15 @@ public class HomePageTest {
 	        .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").exists())
                 .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").string("Earthquake Search"));
     }
+
+
+    @Test
+    public void getHomePage_hasCorrectTitle_2() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
+	        .andExpect(status().isOk())
+	    // .andExpect(xpath("//title").exists())
+            // .andExpect(xpath("//title").string("CS56 Spring Boot Practice App"));
+	        .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[3]/a").exists())
+                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[3]/a").string("Users"));
+    }
 }
