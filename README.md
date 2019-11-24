@@ -1,5 +1,6 @@
 # Travis-ci
-https://travis-ci.org/ucsb-cs56-f19/lab07-YanwuTong.svg?branch=master
+
+[![Build Status](https://travis-ci.org/ucsb-cs56-f19/lab07-YanwuTong.svg?branch=master)](https://travis-ci.org/ucsb-cs56-f19/lab07-YanwuTong)
 
 
 # link 
