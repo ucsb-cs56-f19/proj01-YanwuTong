@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import hello.entities.AppUser;
 import hello.repositories.UserRepository;
+import hello.services.*;
 
 @Controller
 public class UsersController {
