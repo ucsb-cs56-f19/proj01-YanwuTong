@@ -22,6 +22,7 @@ import earthquakes.services.*;
 // import earthquakes.EarthquakeQueryService;
 import earthquakes.searches.LocSearch;
 import java.util.List;
+import earthquakes.osm.Place;
 
 
 
@@ -47,6 +48,8 @@ public class LocationsController {
    
 	    String json = e.getJSON(locSearch.getLocation());
         model.addAttribute("json", json);
+        List<Place> Places = Place.listFromJson(json);
+        model.addAttribute("Places",Places);
         
 
 
