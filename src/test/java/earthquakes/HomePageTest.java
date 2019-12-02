@@ -69,18 +69,27 @@ public class HomePageTest {
     }
 
     @Test
-    public void getHomePage_hasCorrectTitle_1() throws Exception {
+    public void getHomePage_hasCorrectTitle_Earthquakes() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
 	        .andExpect(status().isOk())
 	    // .andExpect(xpath("//title").exists())
             // .andExpect(xpath("//title").string("CS56 Spring Boot Practice App"));
 	        .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").exists())
-                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").string("Earthquake Search"));
+                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[1]/a").string("Earthquake Search"));
     }
 
+    @Test
+    public void getHomePage_hasCorrectTitle_Locations() throws Exception {
+        mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
+	        .andExpect(status().isOk())
+	    // .andExpect(xpath("//title").exists())
+            // .andExpect(xpath("//title").string("CS56 Spring Boot Practice App"));
+	        .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").exists())
+                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").string("Locations Search"));
+    }
 
     @Test
-    public void getHomePage_hasCorrectTitle_2() throws Exception {
+    public void getHomePage_hasCorrectTitle_Users() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
 	        .andExpect(status().isOk())
 	    // .andExpect(xpath("//title").exists())
