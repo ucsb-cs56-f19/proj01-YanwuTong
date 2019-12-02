@@ -1,4 +1,4 @@
-package hello.controllers;
+package earthquakes.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +14,8 @@ import java.util.HashMap;
 
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
-import hello.geojson.FeatureCollection;
-import hello.services.*;
+import earthquakes.geojson.FeatureCollection;
+import earthquakes.services.*;
 
 @Controller
 public class HomeController {

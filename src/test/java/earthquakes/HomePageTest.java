@@ -1,4 +1,4 @@
-package hello;
+package earthquakes;
 
 // import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -21,7 +21,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 //new import
-import hello.controllers.HomeController;
+import earthquakes.controllers.HomeController;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(HomeController.class)

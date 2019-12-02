@@ -1,4 +1,4 @@
-package hello.controllers;
+package earthquakes.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +14,13 @@ import java.util.HashMap;
 
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
-import hello.geojson.FeatureCollection;
-import hello.services.*;
-import hello.searches.EqSearch;
+import earthquakes.geojson.FeatureCollection;
+import earthquakes.services.*;
+
 
 //new import
-import hello.EarthquakeQueryService;
-import hello.searches.EqSearch;
+import earthquakes.EarthquakeQueryService;
+import earthquakes.searches.EqSearch;
 
 
 @Controller
