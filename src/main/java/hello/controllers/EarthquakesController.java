@@ -16,10 +16,11 @@ import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
 import hello.geojson.FeatureCollection;
 import hello.services.*;
+import hello.searches.EqSearch;
 
 //new import
 import hello.EarthquakeQueryService;
-import hello.EqSearch;
+import hello.searches.EqSearch;
 
 
 @Controller
