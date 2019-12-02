@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import earthquakes.repositories.UserRepository;
 import earthquakes.entities.AppUser;
 import java.util.List;
+import earthquakes.services.*;
 
 @ControllerAdvice
 public class AuthControllerAdvice {

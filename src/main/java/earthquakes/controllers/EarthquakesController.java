@@ -19,7 +19,7 @@ import earthquakes.services.*;
 
 
 //new import
-import earthquakes.EarthquakeQueryService;
+// import earthquakes.servcices.EarthquakeQueryService;
 import earthquakes.searches.EqSearch;
 
 

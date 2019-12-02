@@ -19,8 +19,10 @@ import earthquakes.services.*;
 
 
 //new import
-import earthquakes.EarthquakeQueryService;
+// import earthquakes.EarthquakeQueryService;
 import earthquakes.searches.LocSearch;
+import java.util.List;
+
 
 
 @Controller
@@ -32,25 +34,24 @@ public class LocationsController {
 
     @GetMapping("/locations/search")
     public String getLocationsSearch(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken, LocSearch locSeatch){
-	return "locations/search";
+	    return "locations/search";
     }
 
-    // @GetMapping("/earthquakes/results")
-    // public String getEarthquakesResults(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken,EqSearch eqSearch) {
+    @GetMapping("/locations/results")
+    public String getLocationResults(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken,LocSearch locSearch) {
 
-	// EarthquakeQueryService e = new EarthquakeQueryService();
+	    LocationQueryService e = new LocationQueryService();
 	
-    //     model.addAttribute("eqSearch", eqSearch);
+        model.addAttribute("locSearch", locSearch);
 
-	// String json = e.getJSON(eqSearch.getDistance(), eqSearch.getMinmag());
-    //     model.addAttribute("json", json);
-
-	// FeatureCollection featureCollection = FeatureCollection.fromJSON(json);
-    //     model.addAttribute("featureCollection",featureCollection);
+   
+	    String json = e.getJSON(locSearch.getLocation());
+        model.addAttribute("json", json);
+        
 
 
 	
-    //     return "earthquakes/results";
-    // }
+        return "locations/results";
+    }
 	
 }
