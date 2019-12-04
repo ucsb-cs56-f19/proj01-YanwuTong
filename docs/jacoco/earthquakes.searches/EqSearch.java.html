@@ -4,26 +4,54 @@ public class EqSearch{
 
     private int distance;
     private int minmag;
+    private double lat;
+    private double lon;
+    private String location;
 
     public int getDistance(){
-<span class="fc" id="L9">	return this.distance;</span>
+<span class="fc" id="L12">	return this.distance;</span>
     }
     
     public int getMinmag(){
-<span class="fc" id="L13">	return this.minmag;</span>
+<span class="fc" id="L16">	return this.minmag;</span>
     }
 
-<span class="fc" id="L16">    public EqSearch(){</span>
-<span class="fc" id="L17">	this.distance = 0;</span>
-<span class="fc" id="L18">	this.minmag = 0;</span>
-<span class="fc" id="L19">    }</span>
+
+    public double getLat(){
+<span class="fc" id="L21">        return this.lat;</span>
+    }
+
+    public double getLon(){
+<span class="fc" id="L25">        return this.lon;</span>
+    }
+
+    public String getLocation(){
+<span class="fc" id="L29">        return this.location;</span>
+    }
+
+<span class="fc" id="L32">    public EqSearch(){</span>
+<span class="fc" id="L33">	this.distance = 0;</span>
+<span class="fc" id="L34">	this.minmag = 0;</span>
+<span class="fc" id="L35">    }</span>
     
     public void setDistance(int dis){
-<span class="nc" id="L22">	this.distance = dis;</span>
-<span class="nc" id="L23">    }</span>
+<span class="nc" id="L38">	this.distance = dis;</span>
+<span class="nc" id="L39">    }</span>
     
     public void setMinmag(int min){
-<span class="nc" id="L26">	this.minmag = min;</span>
-<span class="nc" id="L27">    }</span>
+<span class="nc" id="L42">	this.minmag = min;</span>
+<span class="nc" id="L43">    }</span>
+
+    public void setLat(double lat){
+<span class="nc" id="L46">        this.lat = lat;</span>
+<span class="nc" id="L47">    }</span>
+
+    public void setLon(double lon){
+<span class="nc" id="L50">        this.lon = lon;</span>
+<span class="nc" id="L51">    }</span>
+
+    public void setLocation(String location){
+<span class="nc" id="L54">        this.location = location;</span>
+<span class="nc" id="L55">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
