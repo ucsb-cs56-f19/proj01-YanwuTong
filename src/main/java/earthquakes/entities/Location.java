@@ -15,7 +15,7 @@ public class Location {
     private long placeId;
     private String name;
     private double latitude;
-    private double longtitude;
+    private double longitude;
 
     public long getId() {
         return this.id;
@@ -49,12 +49,12 @@ public class Location {
         this.latitude = latitude;
     }
 
-    public double getLongtitude() {
-        return this.longtitude;
+    public double getLongitude() {
+        return this.longitude;
     }
 
-    public void setLongtitude(double longtitude) {
-        this.longtitude = longtitude;
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
 }
