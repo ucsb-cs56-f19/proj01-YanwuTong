@@ -25,6 +25,7 @@ import java.util.List;
 import earthquakes.osm.Place;
 import earthquakes.entities.Location;
 import earthquakes.repositories.LocationRepository;
+import org.springframework.web.bind.annotation.PostMapping;
 
 
 
@@ -70,4 +71,11 @@ public class LocationsController {
         return "locations/index";
     }
 	
+    @PostMapping("/locations/add")
+    public String add(Location location, Model model) {
+      locationRepository.save(location);
+      model.addAttribute("locations", locationRepository.findAll());
+      return "locations/index";
+    }
+
 }
