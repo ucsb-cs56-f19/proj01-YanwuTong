@@ -66,26 +66,35 @@ public class LocationsController {
 
 
     @GetMapping("/locations")
-    public String index(Model model) {
-        Iterable<Location> locations = locationRepository.findAll();
+        public String index(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken) {
+        Iterable<Location> locations = locationRepository.findByUid(oAuth2AuthenticationToken.getPrincipal().getAttributes().get("id").toString());
         model.addAttribute("locations", locations);
         return "locations/index";
     }
 	
     @PostMapping("/locations/add")
-    public String add(Location location, Model model) {
+    public String add(Location location, Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken) {
+      location.setUid(oAuth2AuthenticationToken.getPrincipal().getAttributes().get("id").toString());
       locationRepository.save(location);
-      model.addAttribute("locations", locationRepository.findAll());
+      model.addAttribute("locations", locationRepository.findByUid(oAuth2AuthenticationToken.getPrincipal().getAttributes().get("id").toString()));
       return "locations/index";
+    }
+
+    @GetMapping("/locations/admin")
+    public String admin(Model model) {
+
+        Iterable<Location> locations = locationRepository.findAll();
+        model.addAttribute("locations", locations);
+        return "locations/admin";
     }
 
 
     @DeleteMapping("/locations/delete/{id}")
-        public String delete(@PathVariable("id") long id, Model model) {
+        public String delete(@PathVariable("id") long id, Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken) {
         Location location = locationRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid courseoffering Id:" + id));
         locationRepository.delete(location);
-        model.addAttribute("locations", locationRepository.findAll());
+        model.addAttribute("locations", locationRepository.findByUid(oAuth2AuthenticationToken.getPrincipal().getAttributes().get("id").toString()));
         return "locations/index";
     }
 }
